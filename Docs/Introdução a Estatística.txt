@@ -1,0 +1,182 @@
+Introdução a Estatística
+
+A estatística é uma área da matemática que estuda como coletar, organizar, analisar, interpretar e apresentar dados.
+Ela é essencial para transformar informações soltas em conclusões que ajudam na tomada de decisões.
+
+Existem duas áreas principais na estatística:
+
+Estatística Descritiva
+Resume e apresenta dados usando tabelas, gráficos e medidas como média, mediana, moda, variância e desvio padrão.
+Exemplo: mostrar a média de notas de uma turma ou um gráfico de vendas mensais.
+
+Estatística Inferencial
+Usa dados de uma amostra para tirar conclusões sobre uma população inteira.
+Inclui técnicas como testes de hipóteses, intervalos de confiança e análise de regressão.
+Exemplo: pesquisar 1.000 eleitores para prever o resultado de uma eleição.
+
+Na prática, analistas de dados costumam trabalhar mais com estatística descritiva, enquanto cientistas de dados utilizam tanto a descritiva quanto a inferencial.
+
+Estatística x Ciência de Dados
+
+A estatística é parte fundamental da ciência de dados, mas não são a mesma coisa.
+
+Estatística: foca em métodos matemáticos para entender e interpretar dados.
+
+Ciência de Dados: mistura estatística, programação, aprendizado de máquina, visualização e conhecimento de negócio para resolver problemas complexos e lidar com grandes volumes de dados.
+
+Ou seja: a estatística é a base, mas a ciência de dados vai além, incluindo etapas como limpeza de dados, criação de modelos de machine learning e apresentação de resultados.
+
+Estatística Descritiva
+
+Serve para organizar e entender dados sem tirar conclusões sobre uma população maior.
+
+Principais técnicas:
+
+Tabelas e gráficos: frequências, histogramas, gráficos de barras, setores, dispersão e linhas.
+
+Medidas de tendência central: média, mediana e moda.
+
+Medidas de dispersão: variância, desvio padrão e amplitude.
+
+Medidas de posição: quartis, percentis.
+
+Ferramentas como Power BI ajudam muito nessa etapa, pois facilitam cálculos e criação de gráficos.
+
+Estatística Inferencial
+
+Usa dados de uma amostra para fazer previsões ou generalizações sobre a população.
+
+Principais técnicas:
+
+Estimação: estimar um valor desconhecido (como a média) a partir da amostra.
+
+Testes de hipóteses: verificar se algo é verdadeiro ou falso (ex.: média de um grupo é diferente da de outro?).
+
+Análise de regressão: entender a relação entre variáveis e prever resultados.
+
+ANOVA: comparar médias de mais de dois grupos.
+
+Séries temporais: analisar dados ao longo do tempo.
+
+Obs.: o Power BI não é ideal para estatística inferencial. Para isso, usamos ferramentas como Python, R, SPSS, SAS, entre outras.
+
+Big Data Analytics
+
+Big Data significa lidar com grandes volumes de dados, que chegam rapidamente e em diferentes formatos.
+A análise de Big Data usa estatística, aprendizado de máquina e ferramentas avançadas para encontrar padrões e previsões.
+
+Exemplos de aplicações:
+
+Previsão de vendas.
+
+Análise de sentimentos em redes sociais.
+
+Detecção de fraudes.
+
+Análise de risco.
+
+Sistemas de recomendação (como Netflix e Spotify).
+
+População e Amostra
+
+População: o conjunto total de elementos que queremos estudar (ex.: todos os alunos de uma escola).
+
+Amostra: uma parte da população usada para representar o todo.
+
+É comum trabalhar com amostras porque medir toda a população é caro ou impossível.
+
+Tipos de Variáveis
+
+Qualitativas (categóricas): descrevem características, não números.
+
+Nominais: sem ordem (ex.: cor dos olhos).
+
+Ordinais: com ordem (ex.: nível de escolaridade).
+
+Quantitativas (numéricas): expressam números.
+
+Discretas: contáveis (ex.: número de filhos).
+
+Contínuas: medíveis (ex.: altura, peso).
+
+Curiosidade: a idade pode ser quantitativa (ex.: 18 anos) ou qualitativa ordinal (ex.: faixa etária 18–25 anos).
+
+Medidas de Tendência Central
+
+Média: soma dos valores ÷ quantidade de valores.
+
+Mediana: valor do meio quando os dados estão ordenados.
+
+Moda: valor que mais se repete.
+
+Medidas de Dispersão
+
+Variância: mostra o quanto os valores se afastam da média.
+
+Desvio padrão: raiz quadrada da variância; mais fácil de interpretar.
+
+Coeficiente de variação: (desvio padrão ÷ média) × 100; compara variação de conjuntos com médias diferentes.
+
+Medidas de Posição Relativa
+
+Percentis: dividem os dados em 100 partes (P25 significa que 25% dos valores estão abaixo daquele ponto).
+
+Quartis: dividem os dados em 4 partes (Q2 é a mediana).
+
+Z-score: mostra quantos desvios padrão um valor está acima ou abaixo da média.
+
+Métodos Estatísticos para Análise de Dados
+
+Análise descritiva: resumir dados com medidas e gráficos.
+
+Análise exploratória (EDA): buscar padrões, outliers e tendências.
+
+Testes de hipóteses: validar suposições.
+
+Regressão: prever resultados.
+
+ANOVA: comparar grupos.
+
+Séries temporais: prever dados futuros.
+
+Clusterização: agrupar dados semelhantes.
+
+PCA: reduzir número de variáveis mantendo as principais informações.
+
+Técnicas de Amostragem
+
+Probabilísticas (mais confiáveis):
+
+Aleatória simples: todos têm a mesma chance.
+
+Sistemática: seleciona a cada “n” elementos.
+
+Estratificada: divide em grupos e pega amostras de cada um.
+
+Por conglomerados: escolhe alguns grupos inteiros.
+
+Não probabilísticas (mais rápidas, mas menos precisas):
+
+Conveniência: escolhe os mais fáceis de acessar.
+
+Julgamento: seleção baseada na experiência do pesquisador.
+
+Quotas: coleta até atingir certa quantidade por grupo.
+
+Parâmetro x Estatística
+
+Parâmetro: medida da população (ex.: média real de altura de todos os alunos de um país).
+
+Estatística: medida calculada na amostra (ex.: média de altura em um grupo de 50 alunos).
+
+Dados Primários x Secundários
+
+Primários: coletados diretamente para a pesquisa (entrevistas, questionários, experimentos).
+
+Secundários: já existem e foram coletados para outros fins (censos, relatórios, bases públicas).
+
+Observações x Variáveis
+
+Observações: cada registro individual (linha da tabela).
+
+Variáveis: características medidas em cada observação (colunas da tabela).

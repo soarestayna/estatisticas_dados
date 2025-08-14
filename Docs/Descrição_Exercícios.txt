@@ -1,0 +1,12 @@
+Exercícios 
+Curso: Microsoft Power BI Para Business Intelligence e Data Science 
+Data Science Academy 
+
+1 - Exercício Medidas de Posição no Power BI.
+Use o dataset com dados fictícios de pacientes e crie uma tabela de análise descritiva no Power BI com a média, mediana e moda da idade, altura e peso dos pacientes.
+Além disso, responda:
+•Qual a moda do tipo sanguíneo?
+•Qual a moda do estado civil
+
+2 - Exercício Medidas de Dispersão no Power BI
+Crie uma tabela de análise descritiva no Power BI com a média, variância e desvio padrão da idade, altura e peso dos pacientes.Além disso, calcule o coeficiente de variação para as três variáveis.
