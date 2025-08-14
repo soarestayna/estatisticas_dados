@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Exercicios_estatistica"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9c8f92f5-8119-4464-a1cc-e4e861a4162f"
+  }
+}

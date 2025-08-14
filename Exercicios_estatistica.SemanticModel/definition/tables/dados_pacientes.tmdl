@@ -1,0 +1,165 @@
+table dados_pacientes
+	lineageTag: 49437b58-c237-4d36-a9b6-0ff7a5943135
+
+	measure ModaAltura = VAR TabelaFrequencia = SUMMARIZE(dados_pacientes, dados_pacientes[altura(cm)], "Frequencia", COUNT(dados_pacientes[altura(cm)])) VAR MaiorFrequencia = MAXX(TabelaFrequencia, [Frequencia]) RETURN CONCATENATEX(FILTER(TabelaFrequencia, [Frequencia] = MaiorFrequencia), dados_pacientes[altura(cm)], ",")
+		lineageTag: ef285352-77d8-4292-87ce-a93bab1417ca
+
+	measure ModaPeso = VAR TabelaFrequencia  = SUMMARIZE(dados_pacientes,dados_pacientes[peso(kg)], "Frequencia", COUNT(dados_pacientes[peso(kg)])) VAR MaiorFrequencia = MAXX(TabelaFrequencia, [Frequencia]) RETURN CONCATENATEX(FILTER(TabelaFrequencia, [Frequencia] = MaiorFrequencia), dados_pacientes[peso(kg)], ",")
+		lineageTag: 488989bb-cdb6-4465-9607-2f24a336caa4
+
+	measure ModaIdade = VAR TabelaFrequencia = SUMMARIZE(dados_pacientes,dados_pacientes[idade(anos)], "Frequencia", COUNT(dados_pacientes[idade(anos)])) VAR MaiorFrequencia = MAXX(TabelaFrequencia,[Frequencia] ) RETURN CONCATENATEX(FILTER(TabelaFrequencia, [Frequencia] = MaiorFrequencia), dados_pacientes[idade(anos)], ",")
+		lineageTag: 192d9d5c-fd6a-4437-8c93-9c8f7b6ccfe9
+
+	measure ModaTipoSanguineo = ```
+			
+			
+			 VAR TabelaFrequencia =  
+			
+			     SUMMARIZE( 
+			
+			          dados_pacientes, 
+			
+			          dados_pacientes[tipo_sanguineo],  
+			
+			          "Frequencia", COUNT(dados_pacientes[tipo_sanguineo]) 
+			
+			     ) 
+			
+			 VAR MaiorFrequencia =  
+			
+			     MAXX( 
+			
+			       TabelaFrequencia, 
+			
+			       [Frequencia]  
+			
+			     )  
+			
+			 RETURN  
+			
+			      CONCATENATEX( 
+			
+			           FILTER(TabelaFrequencia, [Frequencia] = MaiorFrequencia), dados_pacientes[tipo_sanguineo], ",")
+			```
+		lineageTag: f994dc03-316e-408b-8655-b7725899db77
+
+	measure MODAESTADOCIVIL = ```
+			
+			
+			 VAR TabelaFrequencia =  
+			
+			     SUMMARIZE( 
+			
+			          dados_pacientes, 
+			
+			          dados_pacientes[estado_civil],  
+			
+			          "Frequencia", COUNT(dados_pacientes[estado_civil]) 
+			
+			     ) 
+			
+			 VAR MaiorFrequencia =  
+			
+			     MAXX( 
+			
+			       TabelaFrequencia, 
+			
+			       [Frequencia]  
+			
+			     )  
+			
+			 RETURN  
+			
+			      CONCATENATEX( 
+			
+			           FILTER( 
+			
+			             TabelaFrequencia, [Frequencia] = MaiorFrequencia), 
+			
+			             dados_pacientes[estado_civil],  
+			
+			             "," 
+			
+			      ) 
+			```
+		lineageTag: e29dd431-03d3-4ec1-bbc8-367a02cf63d9
+
+	measure CVPESO = DIVIDE(STDEV.P(dados_pacientes[peso(kg)]), AVERAGE(dados_pacientes[peso(kg)])) *100
+		lineageTag: b5788fe1-4b70-45b7-8504-b2c8cd863c8a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CVALTURA = DIVIDE(STDEV.P(dados_pacientes[altura(cm)]), AVERAGE(dados_pacientes[altura(cm)])) * 100
+		lineageTag: 6adfda34-6edd-49ec-8759-35916376e511
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CVIDADE = DIVIDE(STDEV.P(dados_pacientes[idade(anos)]), AVERAGE(dados_pacientes[idade(anos)])) * 100
+		lineageTag: 7e0ab7e5-16f0-41bd-b60f-1876842f5fe5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: 1028474b-2753-4c20-b85a-b172bc27021e
+		summarizeBy: sum
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column idade(anos)
+		dataType: int64
+		formatString: 0
+		lineageTag: b623aa68-56f5-4d3a-b671-7602621938f2
+		summarizeBy: sum
+		sourceColumn: idade(anos)
+
+		annotation SummarizationSetBy = Automatic
+
+	column altura(cm)
+		dataType: int64
+		formatString: 0
+		lineageTag: eb90c4a8-3d9c-4768-a29c-6c85e7c3c228
+		summarizeBy: sum
+		sourceColumn: altura(cm)
+
+		annotation SummarizationSetBy = Automatic
+
+	column peso(kg)
+		dataType: int64
+		formatString: 0
+		lineageTag: c4b33cbb-0412-4c5e-a9f1-13749a4221fd
+		summarizeBy: sum
+		sourceColumn: peso(kg)
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_sanguineo
+		dataType: string
+		lineageTag: 2bbae35e-77be-4001-a9f2-590a772d80ff
+		summarizeBy: none
+		sourceColumn: tipo_sanguineo
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_civil
+		dataType: string
+		lineageTag: a140d77d-6e27-4a54-ba73-0a7e9dc3d006
+		summarizeBy: none
+		sourceColumn: estado_civil
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dados_pacientes = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\LEAO\OneDrive\Documentos\DSA - Data Science Academy\Cap12\1-dados_pacientes\dados_pacientes.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_paciente", Int64.Type}, {"idade(anos)", Int64.Type}, {"altura(cm)", Int64.Type}, {"peso(kg)", Int64.Type}, {"tipo_sanguineo", type text}, {"estado_civil", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

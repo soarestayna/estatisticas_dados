@@ -1,0 +1,150 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.97\",\"report\":\"2.0.97\",\"page\":\"1.3.97\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "75b0975fa1c90e8260dc",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0382b320b030ebd4e02e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.62730627306273,\"y\":19.926199261992622,\"z\":0,\"width\":472.9151291512915,\"height\":107.60147601476015,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.altura(cm))\"},{\"queryRef\":\"Sum(dados_pacientes.altura(cm))1\"},{\"queryRef\":\"dados_pacientes.ModaAltura\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.altura(cm))\",\"NativeReferenceName\":\"Média de altura(cm)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":6},\"Name\":\"Sum(dados_pacientes.altura(cm))1\",\"NativeReferenceName\":\"Mediana de altura(cm)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ModaAltura\"},\"Name\":\"dados_pacientes.ModaAltura\",\"NativeReferenceName\":\"ModaAltura\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 107.60,
+          "width": 472.92,
+          "x": 10.63,
+          "y": 19.93,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"2b80faaf5080c5d9d25a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.95644330460066,\"y\":507.4752748140642,\"z\":10000,\"width\":583.1734317343173,\"height\":98.30258302583026,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Avg(dados_pacientes.idade(anos))\"},{\"queryRef\":\"Variance(dados_pacientes.idade(anos))\"},{\"queryRef\":\"Sum(dados_pacientes.idade(anos))\"},{\"queryRef\":\"dados_pacientes.CVIDADE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.idade(anos))\",\"NativeReferenceName\":\"Desvio padrão de idade(anos)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":1},\"Name\":\"Avg(dados_pacientes.idade(anos))\",\"NativeReferenceName\":\"Média de idade(anos)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":8},\"Name\":\"Variance(dados_pacientes.idade(anos))\",\"NativeReferenceName\":\"Variação de idade(anos)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVIDADE\"},\"Name\":\"dados_pacientes.CVIDADE\",\"NativeReferenceName\":\"CVIDADE\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Outer'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 98.30,
+          "width": 583.17,
+          "x": 10.96,
+          "y": 507.48,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"33a7d58ae696ae46146c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":949.6774193548387,\"y\":406.02150537634407,\"z\":13000,\"width\":330.3225806451613,\"height\":85.33333333333333,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Exercício 2 -\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#666666\"}}],\"horizontalTextAlignment\":\"right\"},{\"textRuns\":[{\"value\":\"Estatística em Análise de Dados\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#666666\"}}],\"horizontalTextAlignment\":\"right\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 85.33,
+          "width": 330.32,
+          "x": 949.68,
+          "y": 406.02,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"3f8e7ecdce71633e11c6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":825.8064516129032,\"y\":2.752688172043011,\"z\":7000,\"width\":269.76344086021504,\"height\":125.24731182795699,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"dados_pacientes.MODAESTADOCIVIL\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"MODAESTADOCIVIL\"},\"Name\":\"dados_pacientes.MODAESTADOCIVIL\",\"NativeReferenceName\":\"MODAESTADOCIVIL\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 125.25,
+          "width": 269.76,
+          "x": 825.81,
+          "y": 2.75,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"543305a8000780ab4ee0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":502.36559139784947,\"y\":0,\"z\":5000,\"width\":306.9247311827957,\"height\":128,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"dados_pacientes.ModaTipoSanguineo\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ModaTipoSanguineo\"},\"Name\":\"dados_pacientes.ModaTipoSanguineo\",\"NativeReferenceName\":\"ModaTipoSanguineo\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 128.00,
+          "width": 306.92,
+          "x": 502.37,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"7bede08b6de10b32d7a8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1078.5365853658536,\"y\":0,\"z\":12000,\"width\":201.9512195121951,\"height\":103.90243902439025,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Exercício 1 -\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#666666\"}}],\"horizontalTextAlignment\":\"right\"},{\"textRuns\":[{\"value\":\"Estatística em Análise de Dados\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"16pt\",\"color\":\"#666666\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}}}",
+          "filters": "[]",
+          "height": 103.90,
+          "width": 201.95,
+          "x": 1078.54,
+          "y": 0.00,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"9c6baf39920d6eddd0d0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":501.9512195121951,\"y\":127.3170731707317,\"z\":4000,\"width\":307.3170731707317,\"height\":254.6341463414634,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dados_pacientes.tipo_sanguineo\"},{\"queryRef\":\"Count(dados_pacientes.tipo_sanguineo)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"tipo_sanguineo\"},\"Name\":\"dados_pacientes.tipo_sanguineo\",\"NativeReferenceName\":\"tipo_sanguineo\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"tipo_sanguineo\"}},\"Function\":5},\"Name\":\"Count(dados_pacientes.tipo_sanguineo)\",\"NativeReferenceName\":\"Contagem de tipo_sanguineo1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"tipo_sanguineo\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 254.63,
+          "width": 307.32,
+          "x": 501.95,
+          "y": 127.32,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"9d3be86f0309e0e8cac2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":382.5830258302583,\"z\":11000,\"width\":1280.590405904059,\"height\":29.22509225092251,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 29.23,
+          "width": 1280.59,
+          "x": 0.00,
+          "y": 382.58,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"9df399bb6a50e4d068c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":3.985239852398524,\"y\":146.12546125461256,\"z\":2000,\"width\":478.22878228782287,\"height\":108.92988929889299,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.idade(anos))\"},{\"queryRef\":\"Sum(dados_pacientes.idade(anos))1\"},{\"queryRef\":\"dados_pacientes.ModaIdade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.idade(anos))\",\"NativeReferenceName\":\"Média de idade(anos)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":6},\"Name\":\"Sum(dados_pacientes.idade(anos))1\",\"NativeReferenceName\":\"Mediana de idade(anos)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ModaIdade\"},\"Name\":\"dados_pacientes.ModaIdade\",\"NativeReferenceName\":\"ModaIdade\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.93,
+          "width": 478.23,
+          "x": 3.99,
+          "y": 146.13,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c826fdd23368e6abd9d0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":825.8064516129032,\"y\":128,\"z\":6000,\"width\":269.76344086021504,\"height\":254.6236559139785,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dados_pacientes.estado_civil\"},{\"queryRef\":\"CountNonNull(dados_pacientes.estado_civil)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"estado_civil\"},\"Name\":\"dados_pacientes.estado_civil\",\"NativeReferenceName\":\"estado_civil\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"estado_civil\"}},\"Function\":5},\"Name\":\"CountNonNull(dados_pacientes.estado_civil)\",\"NativeReferenceName\":\"Contagem de estado_civil\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"estado_civil\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"15L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 254.62,
+          "width": 269.76,
+          "x": 825.81,
+          "y": 128.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"ca9b02e6b03b96524a5c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":3.985239852398524,\"y\":268.33948339483396,\"z\":3000,\"width\":478.22878228782287,\"height\":114.24354243542436,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.peso(kg))\"},{\"queryRef\":\"Sum(dados_pacientes.peso(kg))1\"},{\"queryRef\":\"dados_pacientes.ModaPeso\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.peso(kg))\",\"NativeReferenceName\":\"Média de peso(kg)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":6},\"Name\":\"Sum(dados_pacientes.peso(kg))1\",\"NativeReferenceName\":\"Mediana de peso(kg)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ModaPeso\"},\"Name\":\"dados_pacientes.ModaPeso\",\"NativeReferenceName\":\"ModaPeso\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"ModaPeso\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"140.0518070840105D\"}}}},\"selector\":{\"metadata\":\"Sum(dados_pacientes.peso(kg))1\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"194.02439105307087D\"}}}},\"selector\":{\"metadata\":\"dados_pacientes.ModaPeso\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 114.24,
+          "width": 478.23,
+          "x": 3.99,
+          "y": 268.34,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d265a2fb42ce77462c73\",\"layouts\":[{\"id\":0,\"position\":{\"x\":603.1678467089573,\"y\":506.6118855350101,\"z\":9000,\"width\":576.6881720430108,\"height\":97.72043010752688,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Avg(dados_pacientes.peso(kg))\"},{\"queryRef\":\"Variance(dados_pacientes.peso(kg))\"},{\"queryRef\":\"Sum(dados_pacientes.peso(kg))\"},{\"queryRef\":\"dados_pacientes.CVPESO\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.peso(kg))\",\"NativeReferenceName\":\"Desvio padrão de peso(kg)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":1},\"Name\":\"Avg(dados_pacientes.peso(kg))\",\"NativeReferenceName\":\"Média de peso(kg)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":8},\"Name\":\"Variance(dados_pacientes.peso(kg))\",\"NativeReferenceName\":\"Variação de peso(kg)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVPESO\"},\"Name\":\"dados_pacientes.CVPESO\",\"NativeReferenceName\":\"CVPESO\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVPESO\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"190.25461639839125D\"}}}},\"selector\":{\"metadata\":\"Sum(dados_pacientes.peso(kg))\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"163.5535051211413D\"}}}},\"selector\":{\"metadata\":\"Variance(dados_pacientes.peso(kg))\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"135.61254460232317D\"}}}},\"selector\":{\"metadata\":\"Avg(dados_pacientes.peso(kg))\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 97.72,
+          "width": 576.69,
+          "x": 603.17,
+          "y": 506.61,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"db567f1b0a58116b08b4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.62730627306273,\"y\":616.3837638376384,\"z\":8000,\"width\":583.1734317343173,\"height\":92.98892988929889,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Avg(dados_pacientes.altura(cm))\"},{\"queryRef\":\"Variance(dados_pacientes.altura(cm))\"},{\"queryRef\":\"Sum(dados_pacientes.altura(cm))\"},{\"queryRef\":\"dados_pacientes.CVALTURA\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.altura(cm))\",\"NativeReferenceName\":\"Desvio padrão de altura(cm)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":1},\"Name\":\"Avg(dados_pacientes.altura(cm))\",\"NativeReferenceName\":\"Média de altura(cm)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":8},\"Name\":\"Variance(dados_pacientes.altura(cm))\",\"NativeReferenceName\":\"Variação de altura(cm)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVALTURA\"},\"Name\":\"dados_pacientes.CVALTURA\",\"NativeReferenceName\":\"CVALTURA\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"194.26937243003593D\"}}}},\"selector\":{\"metadata\":\"Sum(dados_pacientes.altura(cm))\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 92.99,
+          "width": 583.17,
+          "x": 10.63,
+          "y": 616.38,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
