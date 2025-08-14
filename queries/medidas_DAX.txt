@@ -1,0 +1,138 @@
+medidas_DAX
+
+Essa medida calcula o coeficiente de variação da altura dos pacientes:
+CVALTURA = DIVIDE(STDEV.P(dados_pacientes[altura(cm)]), AVERAGE(dados_pacientes[altura(cm)])) * 100
+
+Essa medida calcula o coeficiente de variação da idade dos pacientes:
+CVIDADE = DIVIDE(STDEV.P(dados_pacientes[idade(anos)]), AVERAGE(dados_pacientes[idade(anos)])) * 100
+
+Essa medida calcula o coeficiente de variação do peso dos pacientes:
+CVPESO = DIVIDE(STDEV.P(dados_pacientes[peso(kg)]), 
+AVERAGE(dados_pacientes[peso(kg)])) *100
+
+Essa medida calcula a moda (valor mais frequente) da altura dos pacientes:
+ModaAltura = 
+
+ VAR TabelaFrequencia = 
+	SUMMARIZE(
+		dados_pacientes, 
+		dados_pacientes[altura(cm)], 
+		"Frequencia", COUNT(dados_pacientes[altura(cm)])) 
+
+VAR MaiorFrequencia = 
+	
+	MAXX(
+		TabelaFrequencia, 
+		[Frequencia]
+	) 
+
+RETURN 
+	CONCATENATEX(
+		FILTER(
+			TabelaFrequencia, [Frequencia] = MaiorFrequencia), 					dados_pacientes[altura(cm)], 
+			","
+	)
+
+Essa medida calcula a moda (valor mais frequente) do Estado Civil dos pacientes:
+
+MODAESTADOCIVIL = 
+
+ VAR TabelaFrequencia =  
+     SUMMARIZE( 
+          dados_pacientes, 
+          dados_pacientes[estado_civil],  
+          "Frequencia", COUNT(dados_pacientes[estado_civil]) 
+     ) 
+
+ VAR MaiorFrequencia =  
+     MAXX( 
+       TabelaFrequencia, 
+       [Frequencia]  
+     )  
+
+ RETURN  
+      CONCATENATEX( 
+           FILTER( 
+             TabelaFrequencia, [Frequencia] = MaiorFrequencia), 
+             dados_pacientes[estado_civil],  
+             "," 
+      ) 
+
+Essa medida calcula a moda (valor mais frequente) da Idade dos pacientes:
+
+ModaIdade = 
+	VAR TabelaFrequencia = 
+		SUMMARIZE(
+			dados_pacientes,dados_pacientes[idade(anos)], 
+			"Frequencia", COUNT(dados_pacientes[idade(anos)])
+		) 
+
+	VAR MaiorFrequencia = 
+		MAXX(
+			TabelaFrequencia,
+			[Frequencia] 
+		) 
+RETURN 
+	CONCATENATEX(
+		FILTER(
+			TabelaFrequencia, 
+			[Frequencia] = MaiorFrequencia), 
+			dados_pacientes[idade(anos)], 
+			","
+	)
+
+Essa medida calcula a moda (valor mais frequente) do Peso dos pacientes:
+
+ModaPeso = 
+	VAR TabelaFrequencia  = 
+		SUMMARIZE(
+			dados_pacientes,
+			dados_pacientes[peso(kg)], 
+			"Frequencia", COUNT(dados_pacientes[peso(kg)])
+		)
+ 
+	VAR MaiorFrequencia = 
+		MAXX(
+			TabelaFrequencia, [Frequencia]
+		) 
+
+RETURN 
+	CONCATENATEX(
+		FILTER(
+			TabelaFrequencia, 
+			[Frequencia] = MaiorFrequencia), 
+			dados_pacientes[peso(kg)], 
+			","
+	)
+
+Essa medida calcula a moda (valor mais frequente) do Tipo Sanguineo dos pacientes:
+
+ModaTipoSanguineo = 
+
+ VAR TabelaFrequencia =  
+
+     SUMMARIZE( 
+
+          dados_pacientes, 
+
+          dados_pacientes[tipo_sanguineo],  
+
+          "Frequencia", COUNT(dados_pacientes[tipo_sanguineo]) 
+
+     ) 
+
+ VAR MaiorFrequencia =  
+
+     MAXX( 
+
+       TabelaFrequencia, 
+
+       [Frequencia]  
+
+     )  
+
+ RETURN  
+
+      CONCATENATEX( 
+
+           FILTER(TabelaFrequencia, [Frequencia] = MaiorFrequencia), dados_pacientes[tipo_sanguineo], ",")
